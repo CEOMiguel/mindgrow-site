@@ -5,34 +5,84 @@ import Navbar from '../components/Navbar.astro';
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Omnia360 - Inicio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omnia360 | Soluciones Tecnológicas con IA</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
+        font-family: 'Segoe UI', sans-serif;
         margin: 0;
-        padding: 2rem;
+        background: #f5f7fa;
+        color: #1a1a1a;
       }
-      main {
-        max-width: 800px;
+      header, footer {
+        background-color: #0a0a23;
+        color: white;
+        padding: 1rem 2rem;
+      }
+      .hero {
+        padding: 4rem 2rem;
+        text-align: center;
+        background: linear-gradient(to right, #0a0a23, #202044);
+        color: white;
+      }
+      .section {
+        padding: 3rem 2rem;
+        max-width: 1000px;
         margin: auto;
-        background: white;
-        padding: 3rem;
-        border-radius: 12px;
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
       }
-      h1 {
-        color: #0077cc;
+      h1, h2 {
+        margin-bottom: 1rem;
+      }
+      .btn {
+        background: #0077cc;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+      .footer-links a {
+        color: #ccc;
+        margin-right: 1rem;
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
     <Navbar />
-    <main>
-      <h1>Bienvenido a Omnia360</h1>
-      <p>Somos una empresa tecnológica que impulsa soluciones con inteligencia artificial.</p>
-      <p>Explora nuestros proyectos como <a href="/mindgrow">MindGrow</a>.</p>
-    </main>
+
+    <section class="hero">
+      <h1>Omnia360</h1>
+      <p>Transformamos el futuro aplicando inteligencia artificial a soluciones reales.</p>
+      <a class="btn" href="#servicios">Ver proyectos</a>
+    </section>
+
+    <section class="section">
+      <h2>¿Quiénes somos?</h2>
+      <p>Omnia360 es una empresa tecnológica dedicada al desarrollo de soluciones inteligentes aplicadas a los sectores educativo, productivo y social. Creamos herramientas basadas en IA para maximizar el potencial humano.</p>
+    </section>
+
+    <section class="section" id="servicios">
+      <h2>Proyectos destacados</h2>
+      <ul>
+        <li><strong>MindGrow:</strong> Tutoría educativa adaptativa con IA.</li>
+        <li><strong>IA360:</strong> Asistentes inteligentes empresariales.</li>
+        <li><strong>Omnia Data:</strong> Sistemas de visualización e insights para tomadores de decisiones.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>¿Por qué Omnia360?</h2>
+      <p>Somos una red de innovación. Combinamos tecnología de punta con un enfoque humano para crear herramientas que cambian vidas.</p>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="/mindgrow">MindGrow</a>
+        <a href="/contacto">Contacto</a>
+        <a href="mailto:hola@omnia360.cl">hola@omnia360.cl</a>
+      </div>
+      <p>&copy; 2025 Omnia360 SpA. Todos los derechos reservados.</p>
+    </footer>
   </body>
 </html>
