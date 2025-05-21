@@ -30,4 +30,5 @@ jobs:
         uses: withastro/action@v2
         with:
           deploy-dir: ./dist
-          cname: omnia360.cl
+          cname: www.omnia360.cl
+          
