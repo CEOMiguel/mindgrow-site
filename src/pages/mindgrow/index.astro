@@ -1,38 +1,46 @@
 ---
 import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import HeroMindgrow from '../../components/HeroMindgrow.astro';
+import MindgrowFeatures from '../../components/MindgrowFeatures.astro';
+import MindgrowCTA from '../../components/MindgrowCTA.astro';
 ---
 
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Omnia360 - Inicio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindGrow | Tutor Educativo con IA</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
+        font-family: 'Segoe UI', sans-serif;
         margin: 0;
-        padding: 2rem;
-      }
-      main {
-        max-width: 800px;
-        margin: auto;
-        background: white;
-        padding: 3rem;
-        border-radius: 12px;
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-      }
-      h1 {
-        color: #0077cc;
+        background: #f3f4f6;
+        color: #111827;
       }
     </style>
   </head>
   <body>
     <Navbar />
-    <main>
-      <h1>Bienvenido a Omnia360</h1>
-      <p>Somos una empresa tecnológica que impulsa soluciones con inteligencia artificial.</p>
-      <p>Explora nuestros proyectos como <a href="/mindgrow">MindGrow</a>.</p>
-    </main>
+    <HeroMindgrow />
+
+    <section style="padding: 2rem; max-width: 900px; margin: auto;">
+      <h2>¿Qué es MindGrow?</h2>
+      <p>
+        MindGrow es una plataforma de tutoría personalizada impulsada por Inteligencia Artificial. Nuestro objetivo es reducir la brecha educacional mediante acompañamiento adaptativo y accesible.
+      </p>
+    </section>
+
+    <section style="padding: 2rem; background: #e0f2fe;">
+      <h2 style="text-align: center;">Funcionalidades principales</h2>
+      <ul style="max-width: 800px; margin: auto;">
+        <li>🎯 Tutoría personalizada en tiempo real.</li>
+        <li>📊 Dashboard para seguimiento de progreso.</li>
+        <li>🔊 Text-to-speech y reconocimiento de voz.</li>
+        <li>📚 Sugerencias de aprendizaje adaptativo.</li>
+      </ul>
+    </section>
+
+    <Footer />
   </body>
 </html>
