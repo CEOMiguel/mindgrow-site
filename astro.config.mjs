@@ -4,7 +4,4 @@ export default defineConfig({
   site: 'https://omnia360.cl',
   base: '/',
   outDir: './dist',
-  build: {
-    format: 'directory',
-  },
 });
