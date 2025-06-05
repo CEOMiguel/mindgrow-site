@@ -1,7 +1,6 @@
 ---
 import Navbar from '../components/Navbar.astro';
 ---
-
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -11,7 +10,8 @@ import Navbar from '../components/Navbar.astro';
       body {
         font-family: 'Segoe UI', sans-serif;
         margin: 0;
-        background: #f5f7fa;
+        background: url('/bg-omnia360.jpg') no-repeat center center fixed;
+        background-size: cover;
         color: #1a1a1a;
       }
 
@@ -32,17 +32,22 @@ import Navbar from '../components/Navbar.astro';
         padding: 3rem 2rem;
         max-width: 1000px;
         margin: auto;
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 10px;
+        margin-bottom: 2rem;
       }
 
-      .with-bg {
-        background-image: url('/bg-section.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+      .sticky-section {
+        position: sticky;
+        top: 1rem;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.75);
         color: white;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-        border-radius: 12px;
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+        border-radius: 10px;
+        backdrop-filter: blur(4px);
       }
 
       h1, h2 {
@@ -79,7 +84,7 @@ import Navbar from '../components/Navbar.astro';
       <p>Omnia360 es una empresa tecnológica dedicada al desarrollo de soluciones inteligentes aplicadas a los sectores educativo, productivo y social. Creamos herramientas basadas en IA para maximizar el potencial humano.</p>
     </section>
 
-    <section class="section with-bg" id="servicios">
+    <section class="sticky-section" id="servicios">
       <h2>Proyectos destacados</h2>
       <ul>
         <li><strong>MindGrow:</strong> Tutoría educativa adaptativa con IA.</li>
