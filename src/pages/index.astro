@@ -11,35 +11,33 @@ import Navbar from '../components/Navbar.astro';
       body {
         font-family: 'Segoe UI', sans-serif;
         margin: 0;
-        background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(245,247,250,0.9)),
-                    url('/fondo-omnia360.jpg') no-repeat center center fixed;
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
-        color: #1a1a1a;
+        color: #ffffff;
       }
 
-      header, footer {
-        background-color: #0a0a23;
-        color: white;
-        padding: 1rem 2rem;
+      section {
+        padding: 4rem 2rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.6);
       }
 
       .hero {
-        padding: 4rem 2rem;
+        background-image: url('/bg-hero.jpg');
         text-align: center;
-        background: linear-gradient(to right, #0a0a23, #202044);
-        color: white;
       }
 
-      .section {
-        padding: 3rem 2rem;
-        max-width: 1000px;
-        margin: auto;
-        background: rgba(255, 255, 255, 0.85);
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        margin-bottom: 2rem;
+      .somos {
+        background-image: url('/bg-somos.jpg');
+      }
+
+      .proyectos {
+        background-image: url('/bg-proyectos.jpg');
+      }
+
+      .porque {
+        background-image: url('/bg-porque.jpg');
       }
 
       h1, h2 {
@@ -55,10 +53,36 @@ import Navbar from '../components/Navbar.astro';
         font-weight: bold;
       }
 
+      footer {
+        background-color: #0a0a23;
+        color: white;
+        padding: 2rem;
+        text-align: center;
+      }
+
       .footer-links a {
         color: #ccc;
         margin-right: 1rem;
         text-decoration: none;
+      }
+
+      ul {
+        max-width: 800px;
+        margin: auto;
+        list-style: none;
+        padding-left: 0;
+      }
+
+      li {
+        margin-bottom: 1rem;
+      }
+
+      .overlay {
+        background: rgba(0,0,0,0.6);
+        padding: 2rem;
+        border-radius: 12px;
+        max-width: 900px;
+        margin: auto;
       }
     </style>
   </head>
@@ -67,28 +91,36 @@ import Navbar from '../components/Navbar.astro';
     <Navbar />
 
     <section class="hero">
-      <h1>Omnia360</h1>
-      <p>Transformamos el futuro aplicando inteligencia artificial a soluciones reales.</p>
-      <a class="btn" href="#servicios">Ver proyectos</a>
+      <div class="overlay">
+        <h1>Omnia360</h1>
+        <p>Transformamos el futuro aplicando inteligencia artificial a soluciones reales.</p>
+        <a class="btn" href="#servicios">Ver proyectos</a>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>¿Quiénes somos?</h2>
-      <p>Omnia360 es una empresa tecnológica dedicada al desarrollo de soluciones inteligentes aplicadas a los sectores educativo, productivo y social. Creamos herramientas basadas en IA para maximizar el potencial humano.</p>
+    <section class="somos">
+      <div class="overlay">
+        <h2>¿Quiénes somos?</h2>
+        <p>Omnia360 es una empresa tecnológica dedicada al desarrollo de soluciones inteligentes aplicadas a los sectores educativo, productivo y social. Creamos herramientas basadas en IA para maximizar el potencial humano.</p>
+      </div>
     </section>
 
-    <section class="section" id="servicios">
-      <h2>Proyectos destacados</h2>
-      <ul>
-        <li><strong>MindGrow:</strong> Tutoría educativa adaptativa con IA.</li>
-        <li><strong>IA360:</strong> Asistentes inteligentes empresariales.</li>
-        <li><strong>Omnia Data:</strong> Sistemas de visualización e insights para tomadores de decisiones.</li>
-      </ul>
+    <section class="proyectos" id="servicios">
+      <div class="overlay">
+        <h2>Proyectos destacados</h2>
+        <ul>
+          <li><strong>MindGrow:</strong> Tutoría educativa adaptativa con IA.</li>
+          <li><strong>IA360:</strong> Asistentes inteligentes empresariales.</li>
+          <li><strong>Omnia Data:</strong> Visualización e insights para decisiones estratégicas.</li>
+        </ul>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>¿Por qué Omnia360?</h2>
-      <p>Somos una red de innovación. Combinamos tecnología de punta con un enfoque humano para crear herramientas que cambian vidas.</p>
+    <section class="porque">
+      <div class="overlay">
+        <h2>¿Por qué Omnia360?</h2>
+        <p>Somos una red de innovación. Combinamos tecnología de punta con un enfoque humano para crear herramientas que cambian vidas.</p>
+      </div>
     </section>
 
     <footer>
