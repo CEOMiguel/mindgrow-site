@@ -1,6 +1,7 @@
 ---
 import Navbar from '../components/Navbar.astro';
 ---
+
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -10,46 +11,42 @@ import Navbar from '../components/Navbar.astro';
       body {
         font-family: 'Segoe UI', sans-serif;
         margin: 0;
-        background: url('/bg-omnia360.jpg') no-repeat center center fixed;
+        background: url('/bg-omnia.webp') no-repeat center center fixed;
         background-size: cover;
-        color: white;
+        color: #1a1a1a;
       }
-
       header, footer {
         background-color: #0a0a23;
         color: white;
         padding: 1rem 2rem;
       }
-
       .hero {
         padding: 4rem 2rem;
         text-align: center;
         background: linear-gradient(to right, #0a0a23, #202044);
         color: white;
       }
-
       .section-white {
+        background: #fff;
+        color: #111;
+        padding: 3rem 2rem;
+        border-radius: 1rem;
+        max-width: 1000px;
+        margin: 4rem auto;
+        box-shadow: 0 0 30px rgba(0,0,0,0.1);
+      }
+      .section-blur {
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        backdrop-filter: blur(8px);
         padding: 3rem 2rem;
         max-width: 1000px;
-        margin: 2rem auto;
-        background-color: white;
-        color: #1a1a1a;
-        border-radius: 10px;
+        margin: 4rem auto;
+        border-radius: 1rem;
       }
-
-      .section-transparent {
-        padding: 3rem 2rem;
-        max-width: 1000px;
-        margin: 2rem auto;
-        background-color: transparent;
-        color: white;
-        text-shadow: 0 0 8px #000;
-      }
-
       h1, h2 {
         margin-bottom: 1rem;
       }
-
       .btn {
         background: #0077cc;
         color: white;
@@ -58,7 +55,6 @@ import Navbar from '../components/Navbar.astro';
         border-radius: 8px;
         font-weight: bold;
       }
-
       .footer-links a {
         color: #ccc;
         margin-right: 1rem;
@@ -75,7 +71,7 @@ import Navbar from '../components/Navbar.astro';
       <a class="btn" href="#servicios">Ver proyectos</a>
     </section>
 
-    <section class="section-transparent">
+    <section class="section-blur">
       <h2>¿Quiénes somos?</h2>
       <p>Omnia360 es una empresa tecnológica dedicada al desarrollo de soluciones inteligentes aplicadas a los sectores educativo, productivo y social. Creamos herramientas basadas en IA para maximizar el potencial humano.</p>
     </section>
@@ -89,7 +85,7 @@ import Navbar from '../components/Navbar.astro';
       </ul>
     </section>
 
-    <section class="section-transparent">
+    <section class="section-blur">
       <h2>¿Por qué Omnia360?</h2>
       <p>Somos una red de innovación. Combinamos tecnología de punta con un enfoque humano para crear herramientas que cambian vidas.</p>
     </section>
@@ -104,3 +100,4 @@ import Navbar from '../components/Navbar.astro';
     </footer>
   </body>
 </html>
+<!-- Forzar redeploy - Omnia360 -->
