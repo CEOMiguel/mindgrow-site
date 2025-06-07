@@ -1,6 +1,7 @@
 ---
 import Navbar from '../components/Navbar.astro';
 ---
+
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -10,50 +11,28 @@ import Navbar from '../components/Navbar.astro';
       body {
         font-family: 'Segoe UI', sans-serif;
         margin: 0;
-        background: url('/bg-omnia.png') no-repeat center center fixed;
-        background-size: cover;
-        color: #fff;
+        background: #f5f7fa;
+        color: #1a1a1a;
       }
-
       header, footer {
         background-color: #0a0a23;
         color: white;
         padding: 1rem 2rem;
       }
-
       .hero {
-        padding: 5rem 2rem;
+        padding: 4rem 2rem;
         text-align: center;
         background: linear-gradient(to right, #0a0a23, #202044);
         color: white;
       }
-
-      .section-white {
-        background: rgba(255, 255, 255, 0.95);
-        color: #111;
+      .section {
         padding: 3rem 2rem;
-        border-radius: 1rem;
         max-width: 1000px;
-        margin: 4rem auto;
-        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-        transition: background 0.3s ease-in-out;
+        margin: auto;
       }
-
-      .section-blur {
-        background: rgba(0, 0, 0, 0.6);
-        color: #fff;
-        backdrop-filter: blur(8px);
-        padding: 3rem 2rem;
-        border-radius: 1rem;
-        max-width: 1000px;
-        margin: 4rem auto;
-        transition: background 0.3s ease-in-out;
-      }
-
       h1, h2 {
         margin-bottom: 1rem;
       }
-
       .btn {
         background: #0077cc;
         color: white;
@@ -62,78 +41,49 @@ import Navbar from '../components/Navbar.astro';
         border-radius: 8px;
         font-weight: bold;
       }
-
       .footer-links a {
         color: #ccc;
         margin-right: 1rem;
         text-decoration: none;
       }
-
-      ul {
-        list-style: none;
-        padding-left: 0;
-      }
-
-      ul li {
-        margin-bottom: 1rem;
-      }
     </style>
   </head>
-
   <body>
     <Navbar />
 
-    <!-- Hero principal con mensaje de impacto -->
     <section class="hero">
       <h1>Omnia360</h1>
       <p>Transformamos el futuro aplicando inteligencia artificial a soluciones reales.</p>
       <a class="btn" href="#servicios">Ver proyectos</a>
     </section>
 
-    <!-- Sección institucional con fondo blur sobre la imagen -->
-    <section class="section-blur">
+    <section class="section">
       <h2>¿Quiénes somos?</h2>
-      <p>
-        Somos una empresa chilena de base tecnológica, dedicada al desarrollo de herramientas con inteligencia artificial para impactar positivamente en la educación, la productividad y la toma de decisiones.
-        Nuestro propósito es democratizar el acceso a soluciones de vanguardia para comunidades, empresas e instituciones.
-      </p>
+      <p>Omnia360 es una empresa tecnológica dedicada al desarrollo de soluciones inteligentes aplicadas a los sectores educativo, productivo y social. Creamos herramientas basadas en IA para maximizar el potencial humano.</p>
     </section>
 
-    <!-- Sección de proyectos con fondo blanco limpio -->
-    <section class="section-white" id="servicios">
+    <section class="section" id="servicios">
       <h2>Proyectos destacados</h2>
       <ul>
-        <li><strong>MindGrow:</strong> Tutor educativo personalizado con IA para reducir brechas de aprendizaje.</li>
-        <li><strong>IA360:</strong> Plataforma de asistentes inteligentes para automatizar tareas repetitivas en empresas.</li>
-        <li><strong>Omnia Data:</strong> Visualización avanzada de datos y generación de insights para líderes estratégicos.</li>
-        <li><strong>Guardian360:</strong> Aplicación de seguridad para comunidades con análisis de video y alertas IA (en desarrollo).</li>
+        <li><strong>MindGrow:</strong> Tutoría educativa adaptativa con IA.</li>
+        <li><strong>IA360:</strong> Asistentes inteligentes empresariales.</li>
+        <li><strong>Omnia Data:</strong> Sistemas de visualización e insights para tomadores de decisiones.</li>
       </ul>
     </section>
 
-    <!-- Sección de valor institucional con fondo blur -->
-    <section class="section-blur">
+    <section class="section">
       <h2>¿Por qué Omnia360?</h2>
-      <p>
-        Nuestro enfoque combina tecnología de punta con un fuerte compromiso social. Trabajamos en red con aliados académicos, públicos y privados para entregar soluciones confiables, escalables y orientadas al impacto.
-      </p>
+      <p>Somos una red de innovación. Combinamos tecnología de punta con un enfoque humano para crear herramientas que cambian vidas.</p>
     </section>
 
-    <!-- Sección de visión de futuro con mensaje inspirador -->
-    <section class="section-white">
-      <h2>Visión de futuro</h2>
-      <p>
-        Visualizamos un futuro donde cada persona, comunidad o empresa pueda tomar decisiones más informadas, automatizar lo rutinario y centrarse en lo verdaderamente humano. En Omnia360, ese futuro lo estamos construyendo hoy.
-      </p>
-    </section>
-
-    <!-- Pie de página con enlaces rápidos -->
     <footer>
       <div class="footer-links">
         <a href="/mindgrow">MindGrow</a>
         <a href="/contacto">Contacto</a>
-        <a href="mailto:contacto@omnia360.cl">contacto@omnia360.cl</a>
+        <a href="mailto:hola@omnia360.cl">hola@omnia360.cl</a>
       </div>
       <p>&copy; 2025 Omnia360 SpA. Todos los derechos reservados.</p>
     </footer>
   </body>
 </html>
+<!-- Forzar redeploy - Omnia360 -->
