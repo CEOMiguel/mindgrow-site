@@ -1,7 +1,6 @@
 ---
 import Navbar from '../components/Navbar.astro';
 ---
-
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -13,40 +12,43 @@ import Navbar from '../components/Navbar.astro';
         margin: 0;
         background: url('/bg-omnia.png') no-repeat center center fixed;
         background-size: cover;
-        color: #1a1a1a;
+        color: #fff;
       }
+
       header, footer {
         background-color: #0a0a23;
         color: white;
         padding: 1rem 2rem;
       }
+
       .hero {
         padding: 4rem 2rem;
         text-align: center;
         background: linear-gradient(to right, #0a0a23, #202044);
         color: white;
       }
+
+      .section-transparent {
+        background: transparent;
+        padding: 3rem 2rem;
+        max-width: 1000px;
+        margin: 4rem auto;
+      }
+
       .section-white {
-        background: #fff;
+        background: rgba(255, 255, 255, 0.95);
         color: #111;
         padding: 3rem 2rem;
         border-radius: 1rem;
         max-width: 1000px;
         margin: 4rem auto;
-        box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
       }
-      .section-blur {
-        background: rgba(0, 0, 0, 0.5);
-        color: #fff;
-        backdrop-filter: blur(8px);
-        padding: 3rem 2rem;
-        max-width: 1000px;
-        margin: 4rem auto;
-        border-radius: 1rem;
-      }
+
       h1, h2 {
         margin-bottom: 1rem;
       }
+
       .btn {
         background: #0077cc;
         color: white;
@@ -55,6 +57,7 @@ import Navbar from '../components/Navbar.astro';
         border-radius: 8px;
         font-weight: bold;
       }
+
       .footer-links a {
         color: #ccc;
         margin-right: 1rem;
@@ -71,9 +74,11 @@ import Navbar from '../components/Navbar.astro';
       <a class="btn" href="#servicios">Ver proyectos</a>
     </section>
 
-    <section class="section-blur">
+    <section class="section-transparent">
       <h2>¿Quiénes somos?</h2>
-      <p>Omnia360 es una empresa tecnológica dedicada al desarrollo de soluciones inteligentes aplicadas a los sectores educativo, productivo y social. Creamos herramientas basadas en IA para maximizar el potencial humano.</p>
+      <p>
+        Omnia360 es una empresa tecnológica dedicada al desarrollo de soluciones inteligentes aplicadas a los sectores educativo, productivo y social. Creamos herramientas basadas en IA para maximizar el potencial humano.
+      </p>
     </section>
 
     <section class="section-white" id="servicios">
@@ -81,13 +86,15 @@ import Navbar from '../components/Navbar.astro';
       <ul>
         <li><strong>MindGrow:</strong> Tutoría educativa adaptativa con IA.</li>
         <li><strong>IA360:</strong> Asistentes inteligentes empresariales.</li>
-        <li><strong>Omnia Data:</strong> Sistemas de visualización e insights para tomadores de decisiones.</li>
+        <li><strong>Omnia Data:</strong> Visualización de datos y toma de decisiones basada en IA.</li>
       </ul>
     </section>
 
-    <section class="section-blur">
+    <section class="section-transparent">
       <h2>¿Por qué Omnia360?</h2>
-      <p>Somos una red de innovación. Combinamos tecnología de punta con un enfoque humano para crear herramientas que cambian vidas.</p>
+      <p>
+        Somos una red de innovación. Combinamos tecnología de punta con un enfoque humano para crear herramientas que cambian vidas.
+      </p>
     </section>
 
     <footer>
@@ -100,5 +107,3 @@ import Navbar from '../components/Navbar.astro';
     </footer>
   </body>
 </html>
-<!-- Forzar redeploy - Omnia360 -->
-
