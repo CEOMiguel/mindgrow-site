@@ -35,8 +35,19 @@ import Navbar from '../components/Navbar.astro';
         transition: background 0.3s ease-in-out;
       }
 
-=======
->>>>>>> e4b043d (Corrige fondo animado y logo Omnia360)
+      .section-blur {
+        backdrop-filter: blur(8px);
+        background: rgba(255,255,255,0.7);
+        border-radius: 1rem;
+        margin: 4rem auto;
+        max-width: 1000px;
+        padding: 3rem 2rem;
+        /* Fondo de imagen */
+        background-image: url('/bg-omnia.png');
+        background-size: cover;
+        background-position: center;
+      }
+
       h1, h2 {
         margin-bottom: 1rem;
       }
@@ -114,7 +125,4 @@ import Navbar from '../components/Navbar.astro';
       <p>&copy; 2025 Omnia360 SpA. Todos los derechos reservados.</p>
     </footer>
   </body>
-<<<<<<< HEAD
-</html>
-=======
 </html>
