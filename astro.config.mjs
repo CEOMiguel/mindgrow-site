@@ -1,9 +1,9 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://www.omnia360.cl',  // tu dominio personalizado
+  site: 'https://www.omnia360.cl',
   base: '/',
-  outDir: './dist',
+  output: 'static',
   build: {
     format: 'directory'
   }

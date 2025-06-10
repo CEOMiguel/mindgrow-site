@@ -1,25 +1,17 @@
 ---
-import Navbar from '../../components/Navbar.astro';
-import Footer from '../../components/footer.astro';
+// src/pages/mindgrow/index.astro
+import Layout from '../../layouts/Layout.astro';
 import HeroMindgrow from '../../components/HeroMindgrow.astro';
-import MindgrowFeatures from '../../components/MindgrowFeatures.astro';
-import MindgrowCTA from '../../components/MindgrowCTA.astro';
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MindGrow | Educación Inteligente</title>
+<Layout
+  title="MindGrow | Educación Inteligente"
+  showFooter={true}
+  footerType="mindgrow"
+  background="/bg-mindgrow.png"
+>
+  <Fragment slot="head">
     <style>
-      body {
-        font-family: 'Segoe UI', sans-serif;
-        margin: 0;
-        background: url('/bg-mindgrow.png') no-repeat center center fixed;
-        background-size: cover;
-        color: #111827;
-      }
-
       .section-blur {
         background: rgba(255, 255, 255, 0.85);
         backdrop-filter: blur(6px);
@@ -27,12 +19,12 @@ import MindgrowCTA from '../../components/MindgrowCTA.astro';
         max-width: 960px;
         margin: 3rem auto;
         border-radius: 1rem;
-        box-shadow: 0 0 30px rgba(0,0,0,0.05);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
       }
 
       .section-dark {
         background: rgba(0, 0, 0, 0.6);
-        color: #fff;
+        color: white;
         backdrop-filter: blur(4px);
         padding: 3rem 2rem;
         max-width: 960px;
@@ -71,43 +63,38 @@ import MindgrowCTA from '../../components/MindgrowCTA.astro';
         font-weight: bold;
       }
     </style>
-  </head>
+  </Fragment>
 
-  <body>
-    <Navbar />
-    <HeroMindgrow />
+  <HeroMindgrow />
 
-    <!-- Introducción -->
-    <section class="section-blur">
-      <h2>¿Qué es MindGrow?</h2>
-      <p style="max-width: 700px; margin: auto;">
-        MindGrow es una plataforma educativa que combina inteligencia artificial con pedagogía personalizada. Su objetivo es apoyar el aprendizaje de forma continua, adaptándose al ritmo y estilo de cada estudiante. 
-        Diseñada para acompañar desde etapas tempranas hasta desafíos avanzados, MindGrow promueve la autonomía y el pensamiento crítico.
-      </p>
-    </section>
+  <!-- Introducción -->
+  <section class="section-blur">
+    <h2>¿Qué es MindGrow?</h2>
+    <p style="max-width: 700px; margin: auto;">
+      MindGrow es una plataforma educativa que combina inteligencia artificial con pedagogía personalizada. Su objetivo es apoyar el aprendizaje de forma continua, adaptándose al ritmo y estilo de cada estudiante.
+      Diseñada para acompañar desde etapas tempranas hasta desafíos avanzados, MindGrow promueve la autonomía y el pensamiento crítico.
+    </p>
+  </section>
 
-    <!-- Funcionalidades -->
-    <section class="section-dark">
-      <h2>¿Qué puedes esperar de MindGrow?</h2>
-      <ul>
-        <li>Acompañamiento personalizado que evoluciona contigo.</li>
-        <li>Contenido interactivo que potencia la comprensión.</li>
-        <li>Seguimiento constante del progreso.</li>
-        <li>Retroalimentación positiva y orientada al desarrollo personal.</li>
-      </ul>
-    </section>
+  <!-- Funcionalidades -->
+  <section class="section-dark">
+    <h2>¿Qué puedes esperar de MindGrow?</h2>
+    <ul>
+      <li>Acompañamiento personalizado que evoluciona contigo.</li>
+      <li>Contenido interactivo que potencia la comprensión.</li>
+      <li>Seguimiento constante del progreso.</li>
+      <li>Retroalimentación positiva y orientada al desarrollo personal.</li>
+    </ul>
+  </section>
 
-    <!-- Llamado a la acción -->
-    <section class="section-blur">
-      <h2>Educación centrada en el estudiante</h2>
-      <p style="max-width: 700px; margin: auto;">
-        Nuestro compromiso es crear experiencias educativas más justas, dinámicas y centradas en las personas. Si compartes esta visión, súmate a nuestra comunidad o explora cómo MindGrow puede integrarse en tu institución.
-      </p>
-      <div style="text-align: center;">
-        <a class="btn-link" href="/contacto">Solicitar más información</a>
-      </div>
-    </section>
-
-    <Footer />
-  </body>
-</html>
+  <!-- Llamado a la acción -->
+  <section class="section-blur">
+    <h2>Educación centrada en el estudiante</h2>
+    <p style="max-width: 700px; margin: auto;">
+      Nuestro compromiso es crear experiencias educativas más justas, dinámicas y centradas en las personas. Si compartes esta visión, súmate a nuestra comunidad o explora cómo MindGrow puede integrarse en tu institución.
+    </p>
+    <div style="text-align: center;">
+      <a class="btn-link" href="/contacto">Solicitar más información</a>
+    </div>
+  </section>
+</Layout>
