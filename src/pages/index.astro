@@ -10,67 +10,57 @@ import Layout from '../layouts/Layout.astro';
 >
   <Fragment slot="head">
     <style>
-      :root {
-        --primary-color: #0077cc;
-        --light-bg: rgba(255, 255, 255, 0.95);
-        --dark-bg: rgba(0, 0, 0, 0.5);
-        --max-width: 1000px;
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        background: #f7f9fb;
+        color: #1a1a1a;
       }
 
       .hero {
-        padding: 6rem 2rem;
+        padding: 5rem 2rem;
         text-align: center;
-        background: linear-gradient(to right, #0a0a23, #202044);
-        color: white;
+        background: linear-gradient(to right, #ffffff, #e6f0ff);
+        color: #1a1a1a;
+        border-bottom: 2px solid #d0d7de;
       }
 
       .btn {
-        background: var(--primary-color);
+        background: #0057b8;
         color: white;
         padding: 0.75rem 1.5rem;
         text-decoration: none;
-        border-radius: 8px;
-        font-weight: 600;
-        display: inline-block;
-        margin-top: 1rem;
-        transition: background 0.3s;
-      }
-
-      .btn:hover {
-        background: #005fa3;
-      }
-
-      .section {
-        padding: 3.5rem 2rem;
-        border-radius: 1.2rem;
-        max-width: var(--max-width);
-        margin: 4rem auto;
+        border-radius: 10px;
+        font-weight: bold;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         transition: background 0.3s ease-in-out;
       }
 
-      .section-white {
-        background: var(--light-bg);
-        color: #1a1a1a;
-        text-align: center;
-        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      .btn:hover {
+        background: #003f88;
       }
 
-      .section-blur {
-        background-color: var(--dark-bg);
-        color: white;
-        backdrop-filter: blur(6px);
-        background-clip: padding-box;
-        box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+      .section {
+        padding: 4rem 2rem;
+        max-width: 1000px;
+        margin: 4rem auto;
+        transition: background 0.3s ease-in-out;
+        border-radius: 16px;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .section-white {
+        background: white;
+        text-align: center;
+      }
+
+      .section-light {
+        background: #f0f4f8;
+        text-align: center;
       }
 
       h1, h2 {
         margin-bottom: 1rem;
-        font-weight: 700;
-      }
-
-      p {
-        font-size: 1.1rem;
-        line-height: 1.6;
       }
 
       ul {
@@ -80,9 +70,8 @@ import Layout from '../layouts/Layout.astro';
       }
 
       ul li {
-        margin-bottom: 1.2rem;
-        font-size: 1rem;
-        line-height: 1.5;
+        margin-bottom: 1rem;
+        line-height: 1.6;
       }
 
       strong {
@@ -91,38 +80,40 @@ import Layout from '../layouts/Layout.astro';
     </style>
   </Fragment>
 
-  <!-- Sección principal (Hero) -->
+  <!-- Hero principal -->
   <section class="hero">
     <h1>Omnia360</h1>
-    <p>Transformamos el futuro aplicando inteligencia artificial a soluciones reales.</p>
-    <a class="btn" href="#servicios">Ver proyectos</a>
+    <p>Innovación con Inteligencia Artificial al servicio de la educación, las empresas y la sociedad.</p>
+    <a class="btn" href="#servicios">Explorar proyectos</a>
   </section>
 
-  <!-- Presentación general -->
-  <section class="section section-blur">
+  <!-- ¿Quiénes somos? -->
+  <section class="section section-light">
     <h2>¿Quiénes somos?</h2>
     <p>
-      Omnia360 es una empresa tecnológica chilena dedicada al desarrollo de soluciones basadas en inteligencia artificial. Aplicamos IA para resolver desafíos del mundo real en educación, productividad, seguridad y gestión de datos.
+      Omnia360 es una empresa tecnológica dedicada al desarrollo de soluciones inteligentes aplicadas a los sectores educativo, productivo y social. 
+      Creamos herramientas basadas en IA para maximizar el potencial humano y optimizar procesos.
     </p>
   </section>
 
-  <!-- Proyectos desarrollados -->
+  <!-- Proyectos destacados -->
   <section class="section section-white" id="servicios">
     <h2>Proyectos destacados</h2>
     <ul>
-      <li><strong>MindGrow:</strong> Tutor educativo adaptativo con IA para personalizar el aprendizaje y reducir brechas escolares.</li>
-      <li><strong>IA360:</strong> Plataforma de asistentes inteligentes para automatizar procesos repetitivos en pymes y corporaciones.</li>
-      <li><strong>Omnia Data:</strong> Herramienta de análisis visual de datos con insights automáticos para la toma de decisiones.</li>
-      <li><strong>IAPyme:</strong> Asistente virtual inteligente para pequeñas empresas, que ofrece apoyo en ventas, finanzas y atención al cliente mediante IA generativa.</li>
-      <li><strong>GuardIA360:</strong> Sistema en desarrollo para comunidades y empresas que detecta situaciones de riesgo mediante análisis de video en tiempo real.</li>
+      <li><strong>MindGrow:</strong> Tutor educativo personalizado con IA para reducir brechas de aprendizaje.</li>
+      <li><strong>IA360:</strong> Plataforma de asistentes inteligentes para automatizar tareas repetitivas en empresas.</li>
+      <li><strong>Omnia Data:</strong> Visualización avanzada de datos y generación de insights para líderes estratégicos.</li>
+      <li><strong>GuardIA360:</strong> App de seguridad para comunidades con análisis de video y alertas IA (en desarrollo).</li>
+      <li><strong>IAPyme:</strong> Asistente virtual con IA para emprendedores, automatizando atención, planificación y estrategia de negocios.</li>
     </ul>
   </section>
 
-  <!-- Valor diferencial -->
-  <section class="section section-blur">
-    <h2>¿Por qué Omnia360?</h2>
+  <!-- ¿Por qué elegirnos? -->
+  <section class="section section-light">
+    <h2>¿Por qué elegir Omnia360?</h2>
     <p>
-      Combinamos tecnología de vanguardia con una visión humanista y ética. Nuestro enfoque modular y adaptable permite a organizaciones de todo tamaño incorporar inteligencia artificial sin perder el control de sus procesos ni depender de soluciones genéricas.
+      Somos una red de innovación centrada en las personas. Combinamos inteligencia artificial, diseño centrado en el usuario y visión estratégica 
+      para crear soluciones que transforman organizaciones y comunidades.
     </p>
   </section>
 </Layout>
