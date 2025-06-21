@@ -10,11 +10,50 @@ import Layout from '../layouts/Layout.astro';
 >
   <Fragment slot="head">
     <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        background: url('/bg-omnia.png') no-repeat center center fixed;
+        background-size: cover;
+        color: #fff;
+      }
+
+      header, footer {
+        background-color: #0a0a23;
+        color: white;
+        padding: 1rem 2rem;
+      }
+
       .hero {
-        padding: 5rem 2rem;
+        padding: 6rem 2rem;
         text-align: center;
         background: linear-gradient(to right, #0a0a23, #202044);
         color: white;
+      }
+
+      .section-white {
+        background: rgba(255, 255, 255, 0.95);
+        color: #111;
+        padding: 3rem 2rem;
+        border-radius: 1rem;
+        max-width: 1000px;
+        margin: 4rem auto;
+        transition: background 0.3s ease-in-out;
+      }
+
+      .section-blur {
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        backdrop-filter: blur(8px);
+        padding: 3rem 2rem;
+        border-radius: 1rem;
+        max-width: 1000px;
+        margin: 4rem auto;
+        transition: background 0.3s ease-in-out;
+      }
+
+      h1, h2 {
+        margin-bottom: 1rem;
       }
 
       .btn {
@@ -26,35 +65,10 @@ import Layout from '../layouts/Layout.astro';
         font-weight: bold;
       }
 
-      .section {
-        padding: 3rem 2rem;
-        border-radius: 1rem;
-        max-width: 1000px;
-        margin: 4rem auto;
-        transition: background 0.3s ease-in-out;
-      }
-
-      .section-white {
-        background: white;
-        color: #1a1a1a;
-        text-align: center;
-        border-radius: 1rem;
-      }
-
-      .section-blur {
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        backdrop-filter: blur(6px);
-        background-clip: padding-box;
-        padding: 3rem 2rem;
-        margin: 4rem auto;
-        border-radius: 1rem;
-        max-width: 1000px;
-        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-      }
-
-      h1, h2 {
-        margin-bottom: 1rem;
+      .footer-links a {
+        color: #ccc;
+        margin-right: 1rem;
+        text-decoration: none;
       }
 
       ul {
@@ -64,7 +78,13 @@ import Layout from '../layouts/Layout.astro';
       }
 
       ul li {
-        margin-bottom: 1rem;
+        margin-bottom: 1.2rem;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      strong {
+        font-weight: bold;
       }
 
       strong {
@@ -80,30 +100,50 @@ import Layout from '../layouts/Layout.astro';
     <a class="btn" href="#servicios">Ver proyectos</a>
   </section>
 
-  <!-- ¿Quiénes somos? -->
-  <section class="section section-blur">
-    <h2>¿Quiénes somos?</h2>
-    <p>
-      Omnia360 es una empresa tecnológica dedicada al desarrollo de soluciones inteligentes aplicadas a los sectores educativo, productivo y social. Creamos herramientas basadas en IA para maximizar el potencial humano.
-    </p>
-  </section>
+    <!-- Sección institucional con fondo blur sobre la imagen -->
+    <section class="section-blur">
+      <h2>¿Quiénes somos?</h2>
+      <p>
+        Somos una empresa chilena de base tecnológica, dedicada al desarrollo de herramientas con inteligencia artificial para impactar positivamente en la educación, la productividad y la toma de decisiones.
+        Nuestro propósito es democratizar el acceso a soluciones de vanguardia para comunidades, empresas e instituciones.
+      </p>
+    </section>
 
-  <!-- Proyectos destacados -->
-  <section class="section section-white" id="servicios">
-    <h2>Proyectos destacados</h2>
-    <ul>
-      <li><strong>MindGrow:</strong> Tutor educativo personalizado con IA para reducir brechas de aprendizaje.</li>
-      <li><strong>IA360:</strong> Plataforma de asistentes inteligentes para automatizar tareas repetitivas en empresas.</li>
-      <li><strong>Omnia Data:</strong> Visualización avanzada de datos y generación de insights para líderes estratégicos.</li>
-      <li><strong>GuardIA360:</strong> Aplicación de seguridad para comunidades con análisis de video y alertas IA (en desarrollo).</li>
-    </ul>
-  </section>
+    <!-- Sección de proyectos con fondo blanco limpio -->
+    <section class="section-white" id="servicios">
+      <h2>Proyectos destacados</h2>
+      <ul>
+        <li><strong>MindGrow:</strong> Tutor educativo personalizado con IA para reducir brechas de aprendizaje.</li>
+        <li><strong>IA360:</strong> Plataforma de asistentes inteligentes para automatizar tareas repetitivas en empresas.</li>
+        <li><strong>Omnia Data:</strong> Visualización avanzada de datos y generación de insights para líderes estratégicos.</li>
+        <li><strong>Guardian360:</strong> Aplicación de seguridad para comunidades con análisis de video y alertas IA (en desarrollo).</li>
+      </ul>
+    </section>
 
-  <!-- ¿Por qué Omnia360? -->
-  <section class="section section-blur">
-    <h2>¿Por qué Omnia360?</h2>
-    <p>
-      Somos una red de innovación. Combinamos tecnología de punta con un enfoque humano para crear herramientas que cambian vidas.
-    </p>
-  </section>
-</Layout>
+    <!-- Sección de valor institucional con fondo blur -->
+    <section class="section-blur">
+      <h2>¿Por qué Omnia360?</h2>
+      <p>
+        Nuestro enfoque combina tecnología de punta con un fuerte compromiso social. Trabajamos en red con aliados académicos, públicos y privados para entregar soluciones confiables, escalables y orientadas al impacto.
+      </p>
+    </section>
+
+    <!-- Sección de visión de futuro con mensaje inspirador -->
+    <section class="section-white">
+      <h2>Visión de futuro</h2>
+      <p>
+        Visualizamos un futuro donde cada persona, comunidad o empresa pueda tomar decisiones más informadas, automatizar lo rutinario y centrarse en lo verdaderamente humano. En Omnia360, ese futuro lo estamos construyendo hoy.
+      </p>
+    </section>
+
+    <!-- Pie de página con enlaces rápidos -->
+    <footer>
+      <div class="footer-links">
+        <a href="/mindgrow">MindGrow</a>
+        <a href="/contacto">Contacto</a>
+        <a href="mailto:contacto@omnia360.cl">contacto@omnia360.cl</a>
+      </div>
+      <p>&copy; 2025 Omnia360 SpA. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
