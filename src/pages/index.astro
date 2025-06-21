@@ -6,114 +6,115 @@ import Layout from '../layouts/Layout.astro';
   title="Omnia360 | Soluciones Tecnológicas con IA"
   showFooter={true}
   footerType="home"
-  background="/bg-omnia.png"
+  background="/bg-omnia360.jpg" <!-- usa el fondo que subiste -->
 >
   <Fragment slot="head">
     <style>
       body {
-        font-family: 'Segoe UI', sans-serif;
         margin: 0;
-        background: #f7f9fb;
-        color: #1a1a1a;
+        font-family: 'Segoe UI', sans-serif;
+        background: url('/bg-omnia360.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #f0f8ff;
+      }
+
+      .glass {
+        background: rgba(10, 10, 20, 0.6);
+        backdrop-filter: blur(12px);
+        border-radius: 16px;
+        padding: 3rem 2rem;
+        margin: 4rem auto;
+        max-width: 1000px;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
       }
 
       .hero {
-        padding: 5rem 2rem;
+        padding: 6rem 2rem;
         text-align: center;
-        background: linear-gradient(to right, #ffffff, #e6f0ff);
-        color: #1a1a1a;
-        border-bottom: 2px solid #d0d7de;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #ffffff;
+        text-shadow: 0 0 10px rgba(0,0,0,0.5);
+      }
+
+      p {
+        font-size: 1.3rem;
+        max-width: 800px;
+        margin: 0 auto;
+        text-shadow: 0 0 6px rgba(0,0,0,0.4);
       }
 
       .btn {
-        background: #0057b8;
-        color: white;
+        margin-top: 2rem;
+        background: #00aaff;
+        color: #fff;
         padding: 0.75rem 1.5rem;
-        text-decoration: none;
         border-radius: 10px;
         font-weight: bold;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        transition: background 0.3s ease-in-out;
+        text-decoration: none;
+        transition: background 0.3s ease;
+        box-shadow: 0 0 12px rgba(0, 170, 255, 0.5);
       }
 
       .btn:hover {
-        background: #003f88;
-      }
-
-      .section {
-        padding: 4rem 2rem;
-        max-width: 1000px;
-        margin: 4rem auto;
-        transition: background 0.3s ease-in-out;
-        border-radius: 16px;
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-      }
-
-      .section-white {
-        background: white;
-        text-align: center;
-      }
-
-      .section-light {
-        background: #f0f4f8;
-        text-align: center;
-      }
-
-      h1, h2 {
-        margin-bottom: 1rem;
+        background: #0080cc;
       }
 
       ul {
         list-style: none;
-        padding-left: 0;
-        text-align: left;
+        padding: 0;
+        margin-top: 2rem;
       }
 
-      ul li {
+      li {
         margin-bottom: 1rem;
-        line-height: 1.6;
+        font-size: 1.1rem;
+        line-height: 1.5;
       }
 
       strong {
-        font-weight: bold;
+        color: #7ecfff;
       }
     </style>
   </Fragment>
 
   <!-- Hero principal -->
   <section class="hero">
-    <h1>Omnia360</h1>
-    <p>Innovación con Inteligencia Artificial al servicio de la educación, las empresas y la sociedad.</p>
-    <a class="btn" href="#servicios">Explorar proyectos</a>
+    <div class="glass">
+      <h1>Omnia360</h1>
+      <p>Soluciones tecnológicas innovadoras con inteligencia artificial para educación, negocios y seguridad.</p>
+      <a class="btn" href="#servicios">Ver proyectos</a>
+    </div>
   </section>
 
   <!-- ¿Quiénes somos? -->
-  <section class="section section-light">
+  <section class="glass">
     <h2>¿Quiénes somos?</h2>
     <p>
-      Omnia360 es una empresa tecnológica dedicada al desarrollo de soluciones inteligentes aplicadas a los sectores educativo, productivo y social. 
-      Creamos herramientas basadas en IA para maximizar el potencial humano y optimizar procesos.
+      Somos una empresa dedicada al desarrollo de soluciones inteligentes con IA. Aplicamos innovación en los sectores educativo, productivo y social, generando impacto real.
     </p>
   </section>
 
-  <!-- Proyectos destacados -->
-  <section class="section section-white" id="servicios">
+  <!-- Proyectos -->
+  <section class="glass" id="servicios">
     <h2>Proyectos destacados</h2>
     <ul>
-      <li><strong>MindGrow:</strong> Tutor educativo personalizado con IA para reducir brechas de aprendizaje.</li>
-      <li><strong>IA360:</strong> Plataforma de asistentes inteligentes para automatizar tareas repetitivas en empresas.</li>
-      <li><strong>Omnia Data:</strong> Visualización avanzada de datos y generación de insights para líderes estratégicos.</li>
-      <li><strong>GuardIA360:</strong> App de seguridad para comunidades con análisis de video y alertas IA (en desarrollo).</li>
-      <li><strong>IAPyme:</strong> Asistente virtual con IA para emprendedores, automatizando atención, planificación y estrategia de negocios.</li>
+      <li><strong>MindGrow:</strong> Tutor educativo personalizado para reducir brechas de aprendizaje.</li>
+      <li><strong>IA360:</strong> Asistentes inteligentes para automatizar tareas repetitivas en empresas.</li>
+      <li><strong>Omnia Data:</strong> Visualización avanzada y análisis predictivo para la toma de decisiones.</li>
+      <li><strong>GuardIA360:</strong> Seguridad comunitaria mediante análisis de video con IA.</li>
+      <li><strong>IAPyme:</strong> Asistente IA para pequeñas empresas que automatiza atención y planificación.</li>
     </ul>
   </section>
 
-  <!-- ¿Por qué elegirnos? -->
-  <section class="section section-light">
+  <!-- Cierre -->
+  <section class="glass">
     <h2>¿Por qué elegir Omnia360?</h2>
     <p>
-      Somos una red de innovación centrada en las personas. Combinamos inteligencia artificial, diseño centrado en el usuario y visión estratégica 
-      para crear soluciones que transforman organizaciones y comunidades.
+      Combinamos tecnología de punta con una visión centrada en el ser humano. Creamos experiencias y soluciones que transforman realidades.
     </p>
   </section>
 </Layout>
