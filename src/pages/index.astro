@@ -10,18 +10,11 @@ import Layout from '../layouts/Layout.astro';
 >
   <Fragment slot="head">
     <style>
-      body {
-        font-family: 'Segoe UI', sans-serif;
-        margin: 0;
-        background: url('/bg-omnia.png') no-repeat center center fixed;
-        background-size: cover;
-        color: #fff;
-      }
-
-      header, footer {
-        background-color: #0a0a23;
-        color: white;
-        padding: 1rem 2rem;
+      :root {
+        --primary-color: #0077cc;
+        --light-bg: rgba(255, 255, 255, 0.95);
+        --dark-bg: rgba(0, 0, 0, 0.5);
+        --max-width: 1000px;
       }
 
       .hero {
@@ -31,44 +24,53 @@ import Layout from '../layouts/Layout.astro';
         color: white;
       }
 
-      .section-white {
-        background: rgba(255, 255, 255, 0.95);
-        color: #111;
-        padding: 3rem 2rem;
-        border-radius: 1rem;
-        max-width: 1000px;
-        margin: 4rem auto;
-        transition: background 0.3s ease-in-out;
-      }
-
-      .section-blur {
-        background: rgba(0, 0, 0, 0.6);
-        color: #fff;
-        backdrop-filter: blur(8px);
-        padding: 3rem 2rem;
-        border-radius: 1rem;
-        max-width: 1000px;
-        margin: 4rem auto;
-        transition: background 0.3s ease-in-out;
-      }
-
-      h1, h2 {
-        margin-bottom: 1rem;
-      }
-
       .btn {
-        background: #0077cc;
+        background: var(--primary-color);
         color: white;
         padding: 0.75rem 1.5rem;
         text-decoration: none;
         border-radius: 8px;
-        font-weight: bold;
+        font-weight: 600;
+        display: inline-block;
+        margin-top: 1rem;
+        transition: background 0.3s;
       }
 
-      .footer-links a {
-        color: #ccc;
-        margin-right: 1rem;
-        text-decoration: none;
+      .btn:hover {
+        background: #005fa3;
+      }
+
+      .section {
+        padding: 3.5rem 2rem;
+        border-radius: 1.2rem;
+        max-width: var(--max-width);
+        margin: 4rem auto;
+        transition: background 0.3s ease-in-out;
+      }
+
+      .section-white {
+        background: var(--light-bg);
+        color: #1a1a1a;
+        text-align: center;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .section-blur {
+        background-color: var(--dark-bg);
+        color: white;
+        backdrop-filter: blur(6px);
+        background-clip: padding-box;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+      }
+
+      h1, h2 {
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
       }
 
       ul {
@@ -86,64 +88,41 @@ import Layout from '../layouts/Layout.astro';
       strong {
         font-weight: bold;
       }
-
-      strong {
-        font-weight: bold;
-      }
     </style>
   </Fragment>
 
-  <!-- Hero principal -->
+  <!-- Sección principal (Hero) -->
   <section class="hero">
     <h1>Omnia360</h1>
     <p>Transformamos el futuro aplicando inteligencia artificial a soluciones reales.</p>
     <a class="btn" href="#servicios">Ver proyectos</a>
   </section>
 
-    <!-- Sección institucional con fondo blur sobre la imagen -->
-    <section class="section-blur">
-      <h2>¿Quiénes somos?</h2>
-      <p>
-        Somos una empresa chilena de base tecnológica, dedicada al desarrollo de herramientas con inteligencia artificial para impactar positivamente en la educación, la productividad y la toma de decisiones.
-        Nuestro propósito es democratizar el acceso a soluciones de vanguardia para comunidades, empresas e instituciones.
-      </p>
-    </section>
+  <!-- Presentación general -->
+  <section class="section section-blur">
+    <h2>¿Quiénes somos?</h2>
+    <p>
+      Omnia360 es una empresa tecnológica chilena dedicada al desarrollo de soluciones basadas en inteligencia artificial. Aplicamos IA para resolver desafíos del mundo real en educación, productividad, seguridad y gestión de datos.
+    </p>
+  </section>
 
-    <!-- Sección de proyectos con fondo blanco limpio -->
-    <section class="section-white" id="servicios">
-      <h2>Proyectos destacados</h2>
-      <ul>
-        <li><strong>MindGrow:</strong> Tutor educativo personalizado con IA para reducir brechas de aprendizaje.</li>
-        <li><strong>IA360:</strong> Plataforma de asistentes inteligentes para automatizar tareas repetitivas en empresas.</li>
-        <li><strong>Omnia Data:</strong> Visualización avanzada de datos y generación de insights para líderes estratégicos.</li>
-        <li><strong>Guardian360:</strong> Aplicación de seguridad para comunidades con análisis de video y alertas IA (en desarrollo).</li>
-      </ul>
-    </section>
+  <!-- Proyectos desarrollados -->
+  <section class="section section-white" id="servicios">
+    <h2>Proyectos destacados</h2>
+    <ul>
+      <li><strong>MindGrow:</strong> Tutor educativo adaptativo con IA para personalizar el aprendizaje y reducir brechas escolares.</li>
+      <li><strong>IA360:</strong> Plataforma de asistentes inteligentes para automatizar procesos repetitivos en pymes y corporaciones.</li>
+      <li><strong>Omnia Data:</strong> Herramienta de análisis visual de datos con insights automáticos para la toma de decisiones.</li>
+      <li><strong>IAPyme:</strong> Asistente virtual inteligente para pequeñas empresas, que ofrece apoyo en ventas, finanzas y atención al cliente mediante IA generativa.</li>
+      <li><strong>GuardIA360:</strong> Sistema en desarrollo para comunidades y empresas que detecta situaciones de riesgo mediante análisis de video en tiempo real.</li>
+    </ul>
+  </section>
 
-    <!-- Sección de valor institucional con fondo blur -->
-    <section class="section-blur">
-      <h2>¿Por qué Omnia360?</h2>
-      <p>
-        Nuestro enfoque combina tecnología de punta con un fuerte compromiso social. Trabajamos en red con aliados académicos, públicos y privados para entregar soluciones confiables, escalables y orientadas al impacto.
-      </p>
-    </section>
-
-    <!-- Sección de visión de futuro con mensaje inspirador -->
-    <section class="section-white">
-      <h2>Visión de futuro</h2>
-      <p>
-        Visualizamos un futuro donde cada persona, comunidad o empresa pueda tomar decisiones más informadas, automatizar lo rutinario y centrarse en lo verdaderamente humano. En Omnia360, ese futuro lo estamos construyendo hoy.
-      </p>
-    </section>
-
-    <!-- Pie de página con enlaces rápidos -->
-    <footer>
-      <div class="footer-links">
-        <a href="/mindgrow">MindGrow</a>
-        <a href="/contacto">Contacto</a>
-        <a href="mailto:contacto@omnia360.cl">contacto@omnia360.cl</a>
-      </div>
-      <p>&copy; 2025 Omnia360 SpA. Todos los derechos reservados.</p>
-    </footer>
-  </body>
-</html>
+  <!-- Valor diferencial -->
+  <section class="section section-blur">
+    <h2>¿Por qué Omnia360?</h2>
+    <p>
+      Combinamos tecnología de vanguardia con una visión humanista y ética. Nuestro enfoque modular y adaptable permite a organizaciones de todo tamaño incorporar inteligencia artificial sin perder el control de sus procesos ni depender de soluciones genéricas.
+    </p>
+  </section>
+</Layout>
